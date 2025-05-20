@@ -1,3 +1,4 @@
+import { BookRideButton } from "@/app/components/BookRideButton";
 import {
   SavedLocationButton,
   SavedLocationButtonProps,
@@ -24,6 +25,8 @@ export default function BookRideSection({
 }: Omit<ViewProps, "children">) {
   return (
     <View style={[style]} {...rest}>
+      <BookRideButton />
+
       <View style={{ gap: 12, marginTop: 16 }}>
         {savedLocations.map((location, index) => (
           <SavedLocationButton

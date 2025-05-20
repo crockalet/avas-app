@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { HeroIcon } from "@components/HeroIcon";
 import { Text } from "@ui/Text";
@@ -14,16 +14,18 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.titleContainer}>
-        <HeroIcon name="truck" size={38} color={getColor("primary.100")} />
-        <Text variant="title" color="primary.100">
-          Avas App
-        </Text>
-      </View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={styles.titleContainer}>
+          <HeroIcon name="truck" size={38} color={getColor("primary.100")} />
+          <Text variant="title" color="primary.100">
+            Avas App
+          </Text>
+        </View>
 
-      <BookRideSection style={{ marginTop: 24 }} />
-      <SuggestionsSection style={{ marginTop: 24 }} />
-      <WaysToPlanSection style={{ marginTop: 24 }} />
+        <BookRideSection style={{ marginTop: 24 }} />
+        <SuggestionsSection style={{ marginTop: 24 }} />
+        <WaysToPlanSection style={{ marginTop: 24 }} />
+      </ScrollView>
     </SafeAreaView>
   );
 }
