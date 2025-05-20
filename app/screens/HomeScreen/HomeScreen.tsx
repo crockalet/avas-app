@@ -7,6 +7,7 @@ import { Colors } from "@app/constants/Colors";
 import { useTheme } from "@hooks/useTheme";
 import SuggestionsSection from "./SuggestionsSection";
 import WaysToPlanSection from "./WaysToPlanSection";
+import BookRideSection from "./BookRideSection";
 
 export default function HomeScreen() {
   const { getColor } = useTheme();
@@ -20,6 +21,7 @@ export default function HomeScreen() {
         </Text>
       </View>
 
+      <BookRideSection style={{ marginTop: 24 }} />
       <SuggestionsSection style={{ marginTop: 24 }} />
       <WaysToPlanSection style={{ marginTop: 24 }} />
     </SafeAreaView>
