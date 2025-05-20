@@ -16,6 +16,7 @@
     "@react-navigation/native-stack": "^7.3.13",
     "@types/lodash-es": "^4.17.12",
     "expo": "~53.0.9",
+    "expo-dev-client": "~5.1.8",
     "expo-font": "~13.3.1",
     "expo-status-bar": "~2.2.3",
     "lodash-es": "^4.17.21",
