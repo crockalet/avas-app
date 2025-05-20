@@ -3,13 +3,21 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import HomeScreen from "./app/screens/HomeScreen/HomeScreen";
 import ServicesScreen from "./app/screens/ServicesScreen/ServicesScreen";
-import { createStaticNavigation } from "@react-navigation/native";
+import {
+  createStaticNavigation,
+  StaticParamList,
+} from "@react-navigation/native";
 import ActivityScreen from "./app/screens/ActivityScreen/ActivityScreen";
 import AccountScreen from "./app/screens/AccountScreen/AccountScreen";
 import { HeroIcon } from "./app/components/HeroIcon";
 import { useFonts } from "expo-font";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import RideScreen from "./app/screens/RideScreen/RideScreen";
+import PackageScreen from "./app/screens/PackageScreen/PackageScreen";
+import ReserveScreen from "./app/screens/ReserveScreen/ReserveScreen";
+import RentScreen from "./app/screens/RentScreen/RentScreen";
 
-const RootTabs = createBottomTabNavigator({
+const MainTabs = createBottomTabNavigator({
   screens: {
     Home: {
       screen: HomeScreen,
@@ -50,7 +58,22 @@ const RootTabs = createBottomTabNavigator({
   },
 });
 
-const Navigation = createStaticNavigation(RootTabs);
+const RootStack = createNativeStackNavigator({
+  screens: {
+    Main: {
+      screen: MainTabs,
+      options: {
+        headerShown: false,
+      },
+    },
+    Ride: RideScreen,
+    Package: PackageScreen,
+    Reserve: ReserveScreen,
+    Rent: RentScreen,
+  },
+});
+
+const Navigation = createStaticNavigation(RootStack);
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -62,4 +85,12 @@ export default function App() {
   }
 
   return <Navigation />;
+}
+
+type RootStackParamList = StaticParamList<typeof RootStack>;
+
+declare global {
+  namespace ReactNavigation {
+    interface RootParamList extends RootStackParamList {}
+  }
 }
