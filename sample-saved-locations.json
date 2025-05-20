@@ -1,0 +1,10 @@
+{
+  "home": {
+    "name": "Home",
+    "address": "123 Main St, Springfield, USA"
+  },
+  "work": {
+    "name": "Work",
+    "address": "456 Elm St, Springfield, USA"
+  }
+}

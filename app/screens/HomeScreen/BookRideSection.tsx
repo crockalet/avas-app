@@ -6,16 +6,21 @@ import {
 import React from "react";
 import { View, ViewProps } from "react-native";
 
-const savedLocations: Array<SavedLocationButtonProps> = [
+import SampleSavedLocations from "@/sample-saved-locations.json";
+import { useNavigation } from "@react-navigation/native";
+
+const savedLocations: Array<
+  SavedLocationButtonProps & { key: keyof typeof SampleSavedLocations }
+> = [
   {
+    key: "home",
     icon: "home",
-    name: "Home",
-    address: "123 Main St, City, State",
+    ...SampleSavedLocations.home,
   },
   {
+    key: "work",
     icon: "briefcase",
-    name: "Work",
-    address: "456 Work Ave, City, State",
+    ...SampleSavedLocations.work,
   },
 ];
 
@@ -23,18 +28,26 @@ export default function BookRideSection({
   style,
   ...rest
 }: Omit<ViewProps, "children">) {
+  const navigation = useNavigation();
+
   return (
     <View style={[style]} {...rest}>
-      <BookRideButton />
+      <BookRideButton
+        onPress={(time) =>
+          navigation.navigate("Ride", { time: time.getTime() })
+        }
+      />
 
       <View style={{ gap: 12, marginTop: 16 }}>
-        {savedLocations.map((location, index) => (
+        {savedLocations.map((location) => (
           <SavedLocationButton
-            key={index}
+            key={location.key}
             icon={location.icon}
             name={location.name}
             address={location.address}
-            onPress={() => {}}
+            onPress={() =>
+              navigation.navigate("Ride", { savedLocationKey: location.key })
+            }
           />
         ))}
       </View>

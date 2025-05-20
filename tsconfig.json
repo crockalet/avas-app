@@ -10,6 +10,7 @@
       "@ui/*": ["./app/components/ui/*"],
       "@hooks/*": ["./app/hooks/*"],
       "@screens/*": ["./app/screens/*"]
-    }
+    },
+    "resolveJsonModule": true
   }
 }

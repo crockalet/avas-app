@@ -24,7 +24,7 @@ export const BookRideButton: React.FC<BookRideButtonProps> = ({
   style,
   ...rest
 }) => {
-  disabled ??= !!onPress;
+  disabled ??= !onPress;
 
   const { getColor } = useTheme();
 
