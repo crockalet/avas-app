@@ -1,10 +1,10 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { HeroIcon } from "../../components/HeroIcon";
-import { Text } from "../../components/Text";
-import { Colors } from "../../constants/Colors";
-import { useTheme } from "../../hooks/useTheme";
+import { HeroIcon } from "@components/HeroIcon";
+import { Text } from "@ui/Text";
+import { Colors } from "@app/constants/Colors";
+import { useTheme } from "@hooks/useTheme";
 import SuggestionsSection from "./SuggestionsSection";
 import WaysToPlanSection from "./WaysToPlanSection";
 

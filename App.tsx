@@ -1,21 +1,22 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
-import HomeScreen from "./app/screens/HomeScreen/HomeScreen";
-import ServicesScreen from "./app/screens/ServicesScreen/ServicesScreen";
 import {
   createStaticNavigation,
   StaticParamList,
 } from "@react-navigation/native";
-import ActivityScreen from "./app/screens/ActivityScreen/ActivityScreen";
-import AccountScreen from "./app/screens/AccountScreen/AccountScreen";
-import { HeroIcon } from "./app/components/HeroIcon";
-import { useFonts } from "expo-font";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import RideScreen from "./app/screens/RideScreen/RideScreen";
-import PackageScreen from "./app/screens/PackageScreen/PackageScreen";
-import ReserveScreen from "./app/screens/ReserveScreen/ReserveScreen";
-import RentScreen from "./app/screens/RentScreen/RentScreen";
+
+import { useFonts } from "expo-font";
+
+import { HeroIcon } from "@components/HeroIcon";
+
+import HomeScreen from "@screens/HomeScreen/HomeScreen";
+import ServicesScreen from "@screens/ServicesScreen/ServicesScreen";
+import RideScreen from "@screens/RideScreen/RideScreen";
+import PackageScreen from "@screens/PackageScreen/PackageScreen";
+import ReserveScreen from "@screens/ReserveScreen/ReserveScreen";
+import RentScreen from "@screens/RentScreen/RentScreen";
+import ActivityScreen from "@screens/ActivityScreen/ActivityScreen";
+import AccountScreen from "@screens/AccountScreen/AccountScreen";
 
 const MainTabs = createBottomTabNavigator({
   screens: {

@@ -10,7 +10,7 @@ import {
   View,
 } from "react-native";
 import { useTheme } from "../hooks/useTheme";
-import { Text } from "./Text";
+import { Text } from "@ui/Text";
 
 export type SuggestionButtonProps = {
   iconSrc: ImageSourcePropType;

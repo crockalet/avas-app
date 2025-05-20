@@ -1,7 +1,7 @@
 import React from "react";
 import { ScrollView, StyleSheet, View, ViewProps } from "react-native";
-import { Text } from "../../components/Text";
-import { SuggestionButton } from "../../components/SuggestionButton";
+import { Text } from "@ui/Text";
+import { SuggestionButton } from "@components/SuggestionButton";
 import { useNavigation } from "@react-navigation/native";
 
 export default function SuggestionsSection({

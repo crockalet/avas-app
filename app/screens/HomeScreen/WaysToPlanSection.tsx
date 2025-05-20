@@ -10,7 +10,7 @@ import {
   View,
   ViewProps,
 } from "react-native";
-import { Text } from "../../components/Text";
+import { Text } from "@ui/Text";
 
 export default function WaysToPlanSection({
   ...rest

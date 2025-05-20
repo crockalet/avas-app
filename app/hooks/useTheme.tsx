@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Color, Colors, getColor } from "../constants/Colors";
+import { Color, Colors, getColor } from "@app/constants/Colors";
 
 export function useTheme() {
   const colors = useMemo(() => Colors, []);

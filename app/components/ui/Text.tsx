@@ -4,8 +4,8 @@ import {
   Text as NativeText,
   TextProps as NativeTextProps,
 } from "react-native";
-import { type Color } from "../constants/Colors";
-import { useTheme } from "../hooks/useTheme";
+import { type Color } from "@app/constants/Colors";
+import { useTheme } from "@hooks/useTheme";
 
 type TextVariant = keyof typeof variants;
 

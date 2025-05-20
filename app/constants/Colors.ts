@@ -1,5 +1,5 @@
 import { get } from "lodash-es";
-import { NestedKeyOf } from "../types/NestedKeyOf";
+import { NestedKeyOf } from "@app/types/NestedKeyOf";
 
 export const Colors = {
   primary: {
