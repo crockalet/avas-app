@@ -6,6 +6,7 @@ import { Text } from "../../components/Text";
 import { Colors } from "../../constants/Colors";
 import { useTheme } from "../../hooks/useTheme";
 import SuggestionsSection from "./SuggestionsSection";
+import WaysToPlanSection from "./WaysToPlanSection";
 
 export default function HomeScreen() {
   const { getColor } = useTheme();
@@ -19,7 +20,8 @@ export default function HomeScreen() {
         </Text>
       </View>
 
-      <SuggestionsSection style={{ marginTop: 32 }} />
+      <SuggestionsSection style={{ marginTop: 24 }} />
+      <WaysToPlanSection style={{ marginTop: 24 }} />
     </SafeAreaView>
   );
 }

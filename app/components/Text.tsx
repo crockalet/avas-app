@@ -33,18 +33,18 @@ export const Text: React.FC<TextProps> = ({
 const variants = StyleSheet.create({
   title: {
     fontSize: 32,
-    fontWeight: "900",
+    fontWeight: 900,
   },
   xl: {
     fontSize: 24,
-    fontWeight: "700",
+    fontWeight: 700,
   },
   lg: {
     fontSize: 20,
-    fontWeight: "600",
+    fontWeight: 600,
   },
   base: {
     fontSize: 16,
-    fontWeight: "400",
+    fontWeight: 400,
   },
 });
