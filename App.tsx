@@ -17,6 +17,7 @@ import ReserveScreen from "@screens/ReserveScreen/ReserveScreen";
 import RentScreen from "@screens/RentScreen/RentScreen";
 import ActivityScreen from "@screens/ActivityScreen/ActivityScreen";
 import AccountScreen from "@screens/AccountScreen/AccountScreen";
+import { StatusBar } from "expo-status-bar";
 
 const MainTabs = createBottomTabNavigator({
   screens: {
@@ -85,7 +86,12 @@ export default function App() {
     return null;
   }
 
-  return <Navigation />;
+  return (
+    <>
+      <Navigation />
+      <StatusBar style="dark" />
+    </>
+  );
 }
 
 type RootStackParamList = StaticParamList<typeof RootStack>;

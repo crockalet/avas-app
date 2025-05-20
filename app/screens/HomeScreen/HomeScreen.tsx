@@ -1,6 +1,9 @@
 import React from "react";
 import { ScrollView, StyleSheet, View } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {
+  SafeAreaView,
+  useSafeAreaInsets,
+} from "react-native-safe-area-context";
 import { HeroIcon } from "@components/HeroIcon";
 import { Text } from "@ui/Text";
 import { Colors } from "@app/constants/Colors";
@@ -10,10 +13,17 @@ import WaysToPlanSection from "./WaysToPlanSection";
 import BookRideSection from "./BookRideSection";
 
 export default function HomeScreen() {
+  const { top, left, right } = useSafeAreaInsets();
+
   const { getColor } = useTheme();
 
   return (
-    <SafeAreaView style={styles.container}>
+    <View
+      style={[
+        { marginTop: top, marginLeft: left, marginRight: right },
+        styles.container,
+      ]}
+    >
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.titleContainer}>
           <HeroIcon name="truck" size={38} color={getColor("primary.100")} />
@@ -26,7 +36,7 @@ export default function HomeScreen() {
         <SuggestionsSection style={{ marginTop: 24 }} />
         <WaysToPlanSection style={{ marginTop: 24 }} />
       </ScrollView>
-    </SafeAreaView>
+    </View>
   );
 }
 
